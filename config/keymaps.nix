@@ -94,6 +94,7 @@
       mode = "n";
       key = "<leader>g";
       action = "+git";
+      options.desc = "+git";
     }
 
     {
