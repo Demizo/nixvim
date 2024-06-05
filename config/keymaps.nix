@@ -65,6 +65,13 @@
       };
     }
 
+    {
+      mode = "n";
+      key = "<leader>ca";
+      action = ":lua vim.lsp.buf.code_action()<CR>";
+      options.desc = "Code Actions";
+    }
+
     # Nvim Tree
 
     {

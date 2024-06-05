@@ -66,7 +66,8 @@
     servers = {
       tsserver.enable = true;
       lua-ls.enable = true;
-      nil_ls.enable = true;	
+      nil_ls.enable = true;
+      dartls.enable = true;
       rust-analyzer.enable = true;
       rust-analyzer.installCargo = true;
       rust-analyzer.installRustc = true;
