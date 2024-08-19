@@ -60,6 +60,9 @@
 	trouble = true;
       }; 
     };
+    inc-rename = {
+      enable = true;
+    };
   };
   plugins.lsp = {
     enable = true;
