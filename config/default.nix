@@ -63,6 +63,7 @@
     inc-rename = {
       enable = true;
     };
+    rustaceanvim.enable = true;
   };
   plugins.lsp = {
     enable = true;
@@ -71,9 +72,10 @@
       lua-ls.enable = true;
       nil_ls.enable = true;
       dartls.enable = true;
-      rust-analyzer.enable = true;
-      rust-analyzer.installCargo = true;
-      rust-analyzer.installRustc = true;
+      pyright.enable = true;
+      # rust-analyzer.enable = true;
+      # rust-analyzer.installCargo = true;
+      # rust-analyzer.installRustc = true;
     };
   };
     plugins.lsp-format.enable = true;	 
