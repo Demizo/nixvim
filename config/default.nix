@@ -20,6 +20,7 @@
   };
 
   plugins = {
+    web-devicons.enable = true;
     toggleterm = {
       enable = true;
       settings = {
@@ -35,19 +36,18 @@
     nvim-autopairs.enable = true;
     fidget = {
       enable = true;
-      progress = {
-	suppressOnInsert = true;
- 	ignoreDoneAlready = true;
-	pollRate = 0.5;
+      settings.progress = {
+	suppress_on_insert = true;
+ 	ignore_done_already = true;
       };
     };
     conform-nvim = {
       enable = true;
-      formatOnSave = {
+      settings.formatOnSave = {
 	lspFallback = true;
 	timeoutMs = 500;
       };
-      notifyOnError = true;
+      settings.notify_on_error = true;
     };
     git-worktree = {
       enable = true;
@@ -64,14 +64,15 @@
       enable = true;
     };
     rustaceanvim.enable = true;
+    flutter-tools.enable = true;
   };
   plugins.lsp = {
     enable = true;
     servers = {
-      tsserver.enable = true;
-      lua-ls.enable = true;
+      ts_ls.enable = true;
+      lua_ls.enable = true;
       nil_ls.enable = true;
-      dartls.enable = true;
+      # dartls.enable = true;
       pyright.enable = true;
       # rust-analyzer.enable = true;
       # rust-analyzer.installCargo = true;

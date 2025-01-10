@@ -8,6 +8,8 @@ pkgs.mkShell {
     rustfmt
     rust-analyzer
     gcc
+    dart
+    flutter
 
     # Tools
     ripgrep
