@@ -9,7 +9,6 @@ pkgs.mkShell {
     rust-analyzer
     gcc
     dart
-    flutter
 
     # Tools
     ripgrep
