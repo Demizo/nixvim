@@ -72,7 +72,7 @@
       ts_ls.enable = true;
       lua_ls.enable = true;
       nil_ls.enable = true;
-      # dartls.enable = true;
+      dartls.enable = true;
       pyright.enable = true;
       # rust-analyzer.enable = true;
       # rust-analyzer.installCargo = true;
