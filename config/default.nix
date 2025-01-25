@@ -1,3 +1,4 @@
+{pkgs, lib, ...}:
 {
   # Import all your configuration modules here
   imports = [ 
@@ -71,7 +72,12 @@
     servers = {
       ts_ls.enable = true;
       lua_ls.enable = true;
-      nil_ls.enable = true;
+      nixd.enable = true;
+      nixd.settings = {
+	formatting = {
+	  command = [ "${lib.getExe pkgs.nixfmt-rfc-style}" ];
+	};
+      };
       dartls.enable = true;
       pyright.enable = true;
       # rust-analyzer.enable = true;
