@@ -65,7 +65,27 @@
       enable = true;
     };
     rustaceanvim.enable = true;
-    flutter-tools.enable = true;
+    flutter-tools = {
+      enable = true;
+      settings = {
+        lsp.on_attach.__raw = ''
+          function(client, bufnr)
+            -- Auto-format on save
+            vim.api.nvim_create_autocmd("BufWritePre", {
+              buffer = bufnr,
+              callback = function()
+                vim.lsp.buf.format({ async = false })
+              end,
+            })
+          end
+        '';
+        lsp.settings = {
+          enableSdkFormatter = true;
+          showTodos = true;
+          renameFilesWithClasses = "prompt";
+        };
+      };
+    };
   };
   plugins.mini = {
     enable = true;
@@ -95,7 +115,6 @@
           command = [ "${lib.getExe pkgs.nixfmt-rfc-style}" ];
         };
       };
-      dartls.enable = true;
       pyright.enable = true;
       # rust-analyzer.enable = true;
       # rust-analyzer.installCargo = true;

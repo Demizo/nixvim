@@ -105,6 +105,13 @@
         };
       };
 
+      "<leader>sl" = {
+        action = "lsp_document_symbols";
+        options = {
+          desc = "Lsp Symbols";
+        };
+      };
+
       "<leader>sk" = {
         action = "keymaps";
         options = {
