@@ -60,6 +60,13 @@
         };
       };
 
+      "<leader>fu" = {
+        action = "lsp_references";
+        options = {
+          desc = "Find references (usage)";
+        };
+      };
+
       "<C-p>" = {
         action = "git_files";
         options = {

@@ -94,6 +94,20 @@
 
     {
       mode = "n";
+      key = "<leader>ci";
+      action = ":lua vim.lsp.buf.implementation()<CR>";
+      options.desc = "Go to implementation";
+    }
+
+    {
+      mode = "n";
+      key = "<leader>cd";
+      action = ":lua vim.lsp.buf.definition()<CR>";
+      options.desc = "Go to definition";
+    }
+
+    {
+      mode = "n";
       key = "<leader>rn";
       action = ":IncRename ";
       options.desc = "Rename";
@@ -129,6 +143,13 @@
       key = "<leader>g";
       action = "+git";
       options.desc = "+git";
+    }
+
+    {
+      mode = "n";
+      key = "<leader>gl";
+      action = "<CMD>LazyGit<CR>";
+      options.desc = "Open LazyGit";
     }
 
     {
