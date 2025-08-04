@@ -6,7 +6,7 @@
     ./nvim-tree.nix
     ./keymaps.nix
     ./telescope.nix
-    ./harpoon.nix
+    #./harpoon.nix
   ];
 
   globals.mapleader = " ";
