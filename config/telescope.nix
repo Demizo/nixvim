@@ -67,6 +67,13 @@
         };
       };
 
+      "<leader>fd" = {
+        action = "diagnostics";
+        options = {
+          desc = "Search Diagnostics";
+        };
+      };
+
       "<C-p>" = {
         action = "git_files";
         options = {
