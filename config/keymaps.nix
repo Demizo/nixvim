@@ -108,6 +108,13 @@
 
     {
       mode = "n";
+      key = "<leader>ch";
+      action = ":lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())<CR>";
+      options.desc = "Toggle Inline Hints";
+    }
+
+    {
+      mode = "n";
       key = "<leader>rn";
       action = ":IncRename ";
       options.desc = "Rename";
