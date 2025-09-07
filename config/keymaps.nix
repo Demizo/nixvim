@@ -131,6 +131,7 @@
     }
 
     # File
+
     {
       mode = "n";
       key = "<leader>f";
@@ -237,6 +238,13 @@
       key = "<leader>sd";
       action = ":lua vim.diagnostic.setqflist()<CR>";
       options.desc = "View diagnostic message list";
+    }
+
+    {
+      mode = "n";
+      key = "<leader>si";
+      action = ":lua vim.diagnostic.open_float(nil, { focus = false })<CR>";
+      options.desc = "See diagnostic info";
     }
 
     # Tabs
