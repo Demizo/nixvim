@@ -121,6 +121,9 @@
       # rust-analyzer.installRustc = true;
     };
   };
+  diagnostic.settings = {
+    virtual_text = true;
+  };
   plugins.lsp-format.enable = true;
   plugins.fzf-lua.enable = true;
   plugins.luasnip.enable = true;
