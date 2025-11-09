@@ -34,6 +34,23 @@
     trouble.enable = true;
     lspkind.enable = true;
     lazygit.enable = true;
+    flash = {
+      enable = true;
+      settings = {
+        modes = {
+          search.enabled = true;
+        };
+      };
+    };
+    render-markdown.enable = true;
+    bullets = {
+      enable = true;
+      settings = {
+        outline_levels = [
+          "std-"
+        ];
+      };
+    };
     nvim-autopairs.enable = true;
     fidget = {
       enable = true;
@@ -117,6 +134,7 @@
         };
       };
       pyright.enable = true;
+      markdown_oxide.enable = true;
       # rust-analyzer.enable = true;
       # rust-analyzer.installCargo = true;
       # rust-analyzer.installRustc = true;
