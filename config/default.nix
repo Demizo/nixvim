@@ -188,4 +188,73 @@
     }
   ];
 
+  extraConfigLua = ''
+        -- Command: :JounralToday
+        vim.api.nvim_create_user_command("JournalToday", function()
+          -- Get YYYY_MM_DD
+          local date = os.date("%Y_%m_%d")
+
+          -- Build path (relative to CWD or absolute if you prefer)
+          local path = "journals/" .. date .. ".md"
+
+          -- Auto-create directory if missing
+          local dir = vim.fn.fnamemodify(path, ":h")
+          if vim.fn.isdirectory(dir) == 0 then
+            vim.fn.mkdir(dir, "p")
+          end
+
+          -- Create file if it does not exist
+          if vim.fn.filereadable(path) == 0 then
+            local f = io.open(path, "w")
+            if f then f:close() end
+          end
+
+          -- Open the journal
+          vim.cmd("edit " .. path)
+        end, {})
+
+        -- Command: :JournalLast
+          vim.api.nvim_create_user_command("JournalLast", function()
+            local journal_dir = "journals"     -- adjust if needed
+
+            -- Expand relative → absolute
+            local dir_path = vim.fn.expand(journal_dir)
+
+            if vim.fn.isdirectory(dir_path) == 0 then
+              print("Directory does not exist")
+              return
+            end
+
+            -- Get list of files
+            local files = vim.fn.globpath(dir_path, "*.md", false, true)
+
+            if #files == 0 then
+              print("No .md files found in folder")
+              return
+            end
+
+            local latest = nil
+
+            for _, file in ipairs(files) do
+              local name = vim.fn.fnamemodify(file, ":t")
+
+              local date_str = name:match("(%d%d%d%d)[:_%-](%d%d)[:_%-](%d%d)")
+
+              if date_str then
+    	        local y, m, d = name:match("(%d%d%d%d)[:_%-](%d%d)[:_%-](%d%d)")
+    	        local numeric = tonumber(y .. m .. d)
+                if numeric and (not latest or numeric > latest.numeric) then
+                  latest = { numeric = numeric, file = file }
+                end
+              end
+            end
+
+            if not latest then
+              print("No valid journal files found")
+              return
+            end
+
+            vim.cmd("edit " .. latest.file)
+          end, {})
+  '';
 }
