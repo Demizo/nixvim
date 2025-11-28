@@ -134,6 +134,12 @@
 
     {
       mode = "n";
+      key = "<leader>/";
+      action = "<CMD>FzfLua live_grep<CR>";
+      options.desc = "Grep or fuzzy search all files";
+    }
+    {
+      mode = "n";
       key = "<leader>f";
       action = "+find/file";
     }

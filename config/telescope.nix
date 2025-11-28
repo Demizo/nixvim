@@ -11,12 +11,12 @@
 
     keymaps = {
 
-      "<leader>/" = {
-        action = "live_grep";
-        options = {
-          desc = "Live Grep";
-        };
-      };
+      # "<leader>/" = {
+      #   action = "live_grep";
+      #   options = {
+      #     desc = "Live Grep";
+      #   };
+      # };
 
       "<leader>:" = {
         action = "command_history";
