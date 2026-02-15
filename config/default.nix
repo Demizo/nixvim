@@ -130,7 +130,7 @@
       nixd.enable = true;
       nixd.settings = {
         formatting = {
-          command = [ "${lib.getExe pkgs.nixfmt-rfc-style}" ];
+          command = [ "${lib.getExe pkgs.nixfmt}" ];
         };
       };
       pyright.enable = true;
