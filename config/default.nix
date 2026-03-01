@@ -135,6 +135,20 @@
       };
       pyright.enable = true;
       markdown_oxide.enable = true;
+      cmake.enable = true;
+      clangd = {
+        enable = true;
+        # Use unwrapped package so the C library is not injected. This is for Zephyr development.
+        package = pkgs.llvmPackages_20.clang-unwrapped;
+        cmd = [
+          "clangd"
+          "--background-index"
+          "--clang-tidy"
+          "--header-insertion=iwyu"
+          "--completion-style=detailed"
+        ];
+
+      };
       # rust-analyzer.enable = true;
       # rust-analyzer.installCargo = true;
       # rust-analyzer.installRustc = true;
