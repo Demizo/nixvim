@@ -61,7 +61,10 @@
     };
     conform-nvim = {
       enable = true;
-      settings.formatOnSave = {
+      settings.formatters_by_ft = {
+        c = [ "clang_format" ];
+      };
+      settings.format_on_save = {
         lspFallback = true;
         timeoutMs = 500;
       };
