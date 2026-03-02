@@ -29,8 +29,13 @@
       };
     };
     lualine.enable = true;
-    treesitter.enable = true;
+    treesitter = {
+      enable = true;
+      highlight.enable = true;
+      indent.enable = true;
+    };
     treesitter-context.enable = true;
+    neogen.enable = true;
     trouble.enable = true;
     lspkind.enable = true;
     lazygit.enable = true;
