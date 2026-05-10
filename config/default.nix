@@ -8,6 +8,7 @@
     ./telescope.nix
     ./harpoon.nix
     ./journal.nix
+    ./flash.nix
   ];
 
   globals.mapleader = " ";
@@ -41,14 +42,6 @@
     trouble.enable = true;
     lspkind.enable = true;
     lazygit.enable = true;
-    flash = {
-      enable = true;
-      settings = {
-        modes = {
-          search.enabled = true;
-        };
-      };
-    };
     render-markdown.enable = true;
     bullets = {
       enable = true;
