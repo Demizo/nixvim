@@ -87,6 +87,16 @@
 
     {
       mode = "n";
+      key = "<leader>sf";
+      action = ":noautocmd w<CR>";
+      options = {
+        silent = true;
+        desc = "Save buffer without formatting";
+      };
+    }
+
+    {
+      mode = "n";
       key = "<leader>ca";
       action = ":lua vim.lsp.buf.code_action()<CR>";
       options.desc = "Code Actions";
