@@ -19,6 +19,7 @@
     relativenumber = true; # Show relative line numbers
     spell = true;
     shiftwidth = 2; # Tab width should be 2
+    timeoutlen = 300;
   };
 
   plugins = {
@@ -170,7 +171,12 @@
   plugins.fzf-lua.enable = true;
   plugins.luasnip.enable = true;
   plugins.cmp_luasnip.enable = true;
-  plugins.which-key.enable = true;
+  plugins.which-key = {
+    enable = true;
+    settings = {
+      delay = 200;
+    };
+  };
   plugins.cmp-spell.enable = true;
   plugins.cmp = {
     enable = true;
