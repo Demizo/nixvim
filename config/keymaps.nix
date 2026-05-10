@@ -150,11 +150,18 @@
     }
     {
       mode = "n";
+      key = "<leader>sr";
+      action = "<CMD>FzfLua resume<CR>";
+      options.desc = "Resume last fzf search";
+    }
+    {
+      mode = "n";
       key = "<leader>f";
       action = "+find/file";
     }
 
     {
+      mode = "n";
       key = "<leader>fm";
       action = "<CMD>lua vim.lsp.buf.format()<CR>";
       options.desc = "Format Buffer";
